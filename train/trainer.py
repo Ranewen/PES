@@ -31,7 +31,10 @@ from utils.metrics import calculate_metrics  # Ensure utils/metrics.py exists wi
 # Data Parsing and Preprocessing Functions
 # ------------------------------------------------
 
-def parse_extxyz_with_forces(file_path):
+def parse_extxyz_with_forces(file_path, normalize_positions=False,
+    normalize_forces=False,
+    normalize_energies=True
+):
     """
     Parses an .extxyz file and extracts atomic_numbers, positions, chemical_symbols, energies, and forces.
     Also sorts atoms by atomic number and position to ensure consistent ordering.
@@ -51,6 +54,7 @@ def parse_extxyz_with_forces(file_path):
             - 'forces': (N, 3) ndarray of atomic forces
             - 'energy': float, energy of the structure
     """
+    import numpy as np
     data = []
     with open(file_path, "r") as f:
         lines = f.readlines()
@@ -156,6 +160,65 @@ def parse_extxyz_with_forces(file_path):
         raise ValueError("No valid structures found in the .extxyz file.")
 
     print(f"DEBUG: Total processed structures: {len(data)}")
+
+    # -------------------------------------------------------------------------
+    # 4. (Optional) Data Normalization
+    # -------------------------------------------------------------------------
+    if any([normalize_positions, normalize_forces, normalize_energies]):
+        print("DEBUG: Performing data normalization...")
+
+        # Flatten all positions/forces/energies to compute global mean/std
+        # - positions: shape (N_total, 3)
+        # - forces:    shape (N_total, 3)
+        # - energies:  shape (N_structures,)
+        import numpy as np
+
+        # Gather positions, forces, energies
+        all_positions = []
+        all_forces = []
+        all_energies = []
+
+        for d in data:
+            all_positions.append(d['positions'])
+            all_forces.append(d['forces'])
+            all_energies.append(d['energy'])
+
+        # positions & forces can be stacked
+        positions_stacked = np.concatenate(all_positions, axis=0)  # shape (N, 3)
+        forces_stacked = np.concatenate(all_forces, axis=0)  # shape (N, 3)
+        energies_stacked = np.array(all_energies, dtype=np.float32)
+
+        # 4.1 Standard scaling positions
+        if normalize_positions:
+            pos_mean = positions_stacked.mean(axis=0)  # shape (3,)
+            pos_std = positions_stacked.std(axis=0) + 1e-12
+            print(f"DEBUG: pos_mean={pos_mean}, pos_std={pos_std}")
+
+            # apply in-place
+            for d in data:
+                dpos = d['positions']
+                d['positions'] = (dpos - pos_mean) / pos_std
+
+        # 4.2 Standard scaling forces
+        if normalize_forces:
+            force_mean = forces_stacked.mean(axis=0)  # shape (3,)
+            force_std = forces_stacked.std(axis=0) + 1e-12
+            print(f"DEBUG: force_mean={force_mean}, force_std={force_std}")
+
+            for d in data:
+                dforce = d['forces']
+                d['forces'] = (dforce - force_mean) / force_std
+
+        # 4.3 Standard scaling energies
+        if normalize_energies:
+            e_mean = energies_stacked.mean()
+            e_std = energies_stacked.std() + 1e-12
+            print(f"DEBUG: e_mean={e_mean}, e_std={e_std}")
+
+            for d in data:
+                d['energy'] = (d['energy'] - e_mean) / e_std
+
+
     return data
 
 
@@ -439,7 +502,6 @@ def collate_fn_positions(batch):
     batched_distance = torch.stack(batched_distance)  # (batch_size, max_atoms * max_atoms)
     batched_mask = torch.stack(batched_mask)  # (batch_size, max_atoms * max_atoms)
     batched_energy = torch.stack(batched_energy).unsqueeze(1)  # (batch_size, 1)
-
     return batched_Z, batched_distance, batched_mask, batched_energy
 
 
@@ -577,7 +639,7 @@ def evaluate_model(model, test_loader, device, criterion, mode='positions'):
     with torch.no_grad():
         for batch in test_loader:
             if mode == 'positions':
-                Z, distance_matrix, mask, energies = batch
+                Z, distance_matrix, mask, energies=batch
                 Z = Z.to(device)
                 distance_matrix = distance_matrix.to(device)
                 mask = mask.to(device)
@@ -605,12 +667,17 @@ def evaluate_model(model, test_loader, device, criterion, mode='positions'):
     all_preds = torch.cat(all_preds, dim=0)
     all_targets = torch.cat(all_targets, dim=0)
 
+    # Flatten to (N,)
+    all_preds = all_preds.view(-1)
+    all_targets = all_targets.view(-1)
+
     metrics = calculate_metrics(all_preds, all_targets)
     # Standard metrics
     mse = nn.MSELoss()(all_preds, all_targets).item()
     mae = nn.L1Loss()(all_preds, all_targets).item()
     var_targets = torch.var(all_targets, unbiased=False).item()
     r2 = 1 - mse / var_targets if var_targets != 0 else float('nan')
+
 
     return test_loss, mse, mae, r2, metrics
 
@@ -783,11 +850,12 @@ def train_model(config, mode='positions'):
                 tqdm(train_loader, desc=f"Epoch {epoch}/{config['max_epochs']}")
         ):
             if mode == 'positions':
-                Z, distance_matrix, mask, energies = batch
+                Z, distance_matrix, mask, energies=batch
                 Z = Z.to(device)
                 distance_matrix = distance_matrix.to(device)
                 mask = mask.to(device)
                 energies = energies.to(device)
+
 
                 optimizer.zero_grad()
                 pred_energy = model(Z, distance_matrix, mask)
@@ -798,6 +866,7 @@ def train_model(config, mode='positions'):
                 Z = Z.to(device)
                 forces = forces.to(device)
                 mask = mask.to(device)
+                energies = energies.to(device)
                 energies = energies.to(device)
 
                 optimizer.zero_grad()
@@ -829,7 +898,7 @@ def train_model(config, mode='positions'):
         with torch.no_grad():
             for batch in val_loader:
                 if mode == 'positions':
-                    Z, distance_matrix, mask, energies = batch
+                    Z, distance_matrix, mask, energies=batch
                     Z = Z.to(device)
                     distance_matrix = distance_matrix.to(device)
                     mask = mask.to(device)
@@ -948,7 +1017,7 @@ def train_model(config, mode='positions'):
     with torch.no_grad():
         for batch in test_loader:
             if mode == 'positions':
-                Z, distance_matrix, mask, energies = batch
+                Z, distance_matrix, mask, energies= batch
                 Z = Z.to(device)
                 distance_matrix = distance_matrix.to(device)
                 mask = mask.to(device)
@@ -972,17 +1041,43 @@ def train_model(config, mode='positions'):
     all_preds = torch.cat(all_preds, dim=0).numpy().flatten()
     all_targets = torch.cat(all_targets, dim=0).numpy().flatten()
 
+    # 1. Create a figure
     plt.figure(figsize=(6, 6))
-    plt.scatter(all_targets, all_preds, alpha=0.5)
-    # Diagonal line for reference
+
+    # 1) Scatter plot of actual vs. predicted
+    plt.scatter(all_targets, all_preds, alpha=0.5, label='Data Points')
+
+    # 2) Diagonal line (y = x) from full min to max
     mn = min(all_targets.min(), all_preds.min())
     mx = max(all_targets.max(), all_preds.max())
-    plt.plot([mn, mx], [mn, mx], 'k--', lw=2)
+    plt.plot([mn, mx], [mn, mx], 'k--', lw=2, label='y = x')
+
+    # 3) Force a red line from (0,0) to (-24474, -24474):
+    #    We'll just assume you want a pure diagonal y=x in that range.
+    x_line_custom = np.linspace(0.0, -24474, 100)  # from 0 to -24474
+    y_line_custom = x_line_custom  # slope=1, i.e. y=x
+    plt.plot(x_line_custom, y_line_custom, 'r-', lw=2, label='From (0,0) to (-24474,-24474)')
+
+    # 4) Labeling and layout
     plt.xlabel("True Energy (eV)")
     plt.ylabel("Predicted Energy (eV)")
-    plt.title(f"Test Set: Predicted vs. True Energies ({mode.capitalize()})")
+    plt.title(f"Test Set: Predicted vs. True Energies ({mode})")
+    plt.legend()
     plt.tight_layout()
-    # Save the plot
-    plt.savefig(os.path.join(config['root'], f"test_pred_vs_true_{mode}.png"))
+
+    # 5) Save the figure
+    plot_path = os.path.join(config['root'], f"test_pred_vs_true_{mode}.png")
+    plt.savefig(plot_path)
     plt.show()
+
+    # 9. Write the (true, pred) pairs to output.txt
+    output_file = os.path.join(config['root'], "output.txt")
+    with open(output_file, 'w') as f:
+        f.write("# True_Energy, Predicted_Energy\n")
+        for true_val, pred_val in zip(all_targets, all_preds):
+            f.write(f"{true_val:.6f}, {pred_val:.6f}\n")
+
+    print(f"Scatter plot saved at: {plot_path}")
+    print(f"(true, pred) values saved in: {output_file}")
+    print(f"Fitted line: y = {a:.3f}x + {b:.3f}  (from x=0.0 to x={mx:.3f})")
 

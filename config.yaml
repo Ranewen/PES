@@ -40,12 +40,12 @@ PolynomialCutoff_p: 6
 
 # Training Configuration
 n_train: 6043
-n_val: 1245
+n_val: 1345
 n_test: 1245
 learning_rate: 0.005
 batch_size: 5
 validation_batch_size: 10
-max_epochs: 250
+max_epochs: 100
 train_val_split: random
 shuffle: true
 use_ema: true
