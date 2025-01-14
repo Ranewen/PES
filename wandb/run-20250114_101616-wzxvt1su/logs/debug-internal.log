@@ -1,0 +1,8 @@
+{"time":"2025-01-14T10:16:16.997073012+03:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-14T10:16:16.997091521+03:00","level":"INFO","msg":"created symlink","path":"/home/ersoy/Desktop/PES/wandb/run-20250114_101616-wzxvt1su/logs/debug-core.log"}
+{"time":"2025-01-14T10:16:17.102179555+03:00","level":"INFO","msg":"created new stream","id":"wzxvt1su"}
+{"time":"2025-01-14T10:16:17.102212259+03:00","level":"INFO","msg":"stream: started","id":"wzxvt1su"}
+{"time":"2025-01-14T10:16:17.102235921+03:00","level":"INFO","msg":"writer: Do: started","stream_id":"wzxvt1su"}
+{"time":"2025-01-14T10:16:17.102238853+03:00","level":"INFO","msg":"handler: started","stream_id":"wzxvt1su"}
+{"time":"2025-01-14T10:16:17.102259746+03:00","level":"INFO","msg":"sender: started","stream_id":"wzxvt1su"}
+{"time":"2025-01-14T10:16:17.554281924+03:00","level":"INFO","msg":"Starting system monitor"}

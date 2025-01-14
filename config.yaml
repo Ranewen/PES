@@ -1,0 +1,72 @@
+root: results/molecule_distance_calc
+run_name: molecule_distance_run
+seed: 123
+dataset_seed: 456
+append: true
+
+default_dtype: float64
+model_dtype: float32
+allow_tf32: true
+device: cuda
+
+
+# Dataset Configuration
+dataset: ase
+dataset_file_name: ./data/datalarge.extxyz
+ase_args:
+  format: extxyz
+key_mapping:
+  atomic_numbers: atomic_numbers
+  total_energy: energy
+  pos: positions
+
+chemical_symbols: ['H', 'C', 'O', 'N']
+
+
+distance_size: 1936       # Örneğin, max_atoms=44 ise 44*44=1936
+num_atom_types: 4         # Kullanılan farklı atom tipi sayısı (örneğin, ['H', 'C', 'O', 'N'])
+
+# Model Parameters
+max_atoms: 44
+r_max: 5.0
+num_layers: 4
+l_max: 1
+parity: true
+num_features: 128
+nonlinearity_type: gate
+num_basis: 8
+BesselBasis_trainable: true
+PolynomialCutoff_p: 6
+
+# Training Configuration
+n_train: 6043
+n_val: 1245
+n_test: 1245
+learning_rate: 0.005
+batch_size: 5
+validation_batch_size: 10
+max_epochs: 250
+train_val_split: random
+shuffle: true
+use_ema: true
+ema_decay: 0.99
+
+# Loss Function
+loss_coeffs:
+  total_energy:
+    - 1.0
+    - PerAtomMSELoss
+
+# Optimizer
+optimizer_name: Adam
+optimizer_amsgrad: true
+optimizer_eps: 1.0e-08
+optimizer_weight_decay: 1e-4
+
+# Logging Configuration
+wandb: true
+wandb_project: molecule-distance-prediction
+verbose: info
+log_batch_freq: 100
+log_epoch_freq: 1
+save_checkpoint_freq: -1
