@@ -945,4 +945,318 @@ Epoch 189, Training Loss: 529.003894, Validation Loss: 1333.258093
 Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch189.pth
 
 Epoch 190/250
-Epoch 190/250:  27%|█████████████████████████████████████████████▍                                                                                                                           | 325/1209 [00:01<00:05, 170.65it/s]
+Epoch 190/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:04<00:00, 290.86it/s]
+Epoch 190, Training Loss: 529.018668, Validation Loss: 1333.223843
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch190.pth
+
+Epoch 191/250
+Epoch 191/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 368.38it/s]
+Epoch 191, Training Loss: 528.999354, Validation Loss: 1333.227516
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch191.pth
+
+Epoch 192/250
+Epoch 192/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 344.42it/s]
+Epoch 192, Training Loss: 529.018964, Validation Loss: 1333.126654
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch192.pth
+
+Epoch 193/250
+Epoch 193/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 320.64it/s]
+Epoch 193, Training Loss: 529.027201, Validation Loss: 1333.175491
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch193.pth
+
+Epoch 194/250
+Epoch 194/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 356.65it/s]
+Epoch 194, Training Loss: 529.012515, Validation Loss: 1333.163712
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch194.pth
+
+Epoch 195/250
+Epoch 195/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 347.14it/s]
+Epoch 195, Training Loss: 528.992929, Validation Loss: 1333.215557
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch195.pth
+
+Epoch 196/250
+Epoch 196/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:04<00:00, 263.20it/s]
+Epoch 196, Training Loss: 529.013454, Validation Loss: 1333.142656
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch196.pth
+
+Epoch 197/250
+Epoch 197/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 319.95it/s]
+Epoch 197, Training Loss: 528.995670, Validation Loss: 1333.155513
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch197.pth
+
+Epoch 198/250
+Epoch 198/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 363.17it/s]
+Epoch 198, Training Loss: 528.992980, Validation Loss: 1333.235998
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch198.pth
+
+Epoch 199/250
+Epoch 199/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 360.34it/s]
+Epoch 199, Training Loss: 529.019506, Validation Loss: 1333.151578
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch199.pth
+
+Epoch 200/250
+Epoch 200/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 367.18it/s]
+Epoch 200, Training Loss: 528.997324, Validation Loss: 1333.114270
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch200.pth
+
+Epoch 201/250
+Epoch 201/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 356.98it/s]
+Epoch 201, Training Loss: 529.010660, Validation Loss: 1333.122809
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch201.pth
+
+Epoch 202/250
+Epoch 202/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 377.36it/s]
+Epoch 202, Training Loss: 528.992661, Validation Loss: 1333.046372
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch202.pth
+
+Epoch 203/250
+Epoch 203/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 343.21it/s]
+Epoch 203, Training Loss: 528.979320, Validation Loss: 1333.038343
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch203.pth
+
+Epoch 204/250
+Epoch 204/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 320.24it/s]
+Epoch 204, Training Loss: 528.986944, Validation Loss: 1333.072066
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch204.pth
+
+Epoch 205/250
+Epoch 205/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 319.52it/s]
+Epoch 205, Training Loss: 528.985084, Validation Loss: 1333.158300
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch205.pth
+
+Epoch 206/250
+Epoch 206/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 335.97it/s]
+Epoch 206, Training Loss: 528.978249, Validation Loss: 1333.097478
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch206.pth
+
+Epoch 207/250
+Epoch 207/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 328.13it/s]
+Epoch 207, Training Loss: 529.000699, Validation Loss: 1333.065832
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch207.pth
+
+Epoch 208/250
+Epoch 208/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 316.37it/s]
+Epoch 208, Training Loss: 528.975694, Validation Loss: 1333.164199
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch208.pth
+
+Epoch 209/250
+Epoch 209/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 360.60it/s]
+Epoch 209, Training Loss: 529.014069, Validation Loss: 1333.193899
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch209.pth
+
+Epoch 210/250
+Epoch 210/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 380.39it/s]
+Epoch 210, Training Loss: 528.981460, Validation Loss: 1333.125072
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch210.pth
+
+Epoch 211/250
+Epoch 211/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 345.37it/s]
+Epoch 211, Training Loss: 528.988451, Validation Loss: 1333.119212
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch211.pth
+
+Epoch 212/250
+Epoch 212/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 361.00it/s]
+Epoch 212, Training Loss: 528.978466, Validation Loss: 1333.095197
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch212.pth
+
+Epoch 213/250
+Epoch 213/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 351.81it/s]
+Epoch 213, Training Loss: 528.972940, Validation Loss: 1333.042252
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch213.pth
+
+Epoch 214/250
+Epoch 214/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 366.76it/s]
+Epoch 214, Training Loss: 529.004886, Validation Loss: 1332.983247
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch214.pth
+
+Epoch 215/250
+Epoch 215/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 385.39it/s]
+Epoch 215, Training Loss: 528.971833, Validation Loss: 1332.916693
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch215.pth
+
+Epoch 216/250
+Epoch 216/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 366.21it/s]
+Epoch 216, Training Loss: 528.966839, Validation Loss: 1332.950825
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch216.pth
+
+Epoch 217/250
+Epoch 217/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 371.42it/s]
+Epoch 217, Training Loss: 528.955380, Validation Loss: 1332.837738
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch217.pth
+
+Epoch 218/250
+Epoch 218/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 381.95it/s]
+Epoch 218, Training Loss: 528.962971, Validation Loss: 1332.811167
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch218.pth
+
+Epoch 219/250
+Epoch 219/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 378.69it/s]
+Epoch 219, Training Loss: 528.972416, Validation Loss: 1332.789614
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch219.pth
+
+Epoch 220/250
+Epoch 220/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 333.74it/s]
+Epoch 220, Training Loss: 528.958664, Validation Loss: 1332.810066
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch220.pth
+
+Epoch 221/250
+Epoch 221/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:05<00:00, 214.07it/s]
+Epoch 221, Training Loss: 528.970021, Validation Loss: 1332.826511
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch221.pth
+
+Epoch 222/250
+Epoch 222/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:05<00:00, 226.54it/s]
+Epoch 222, Training Loss: 528.955180, Validation Loss: 1332.885792
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch222.pth
+
+Epoch 223/250
+Epoch 223/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:04<00:00, 292.02it/s]
+Epoch 223, Training Loss: 528.965877, Validation Loss: 1332.857814
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch223.pth
+
+Epoch 224/250
+Epoch 224/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:04<00:00, 244.42it/s]
+Epoch 224, Training Loss: 528.980835, Validation Loss: 1332.871467
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch224.pth
+
+Epoch 225/250
+Epoch 225/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 306.62it/s]
+Epoch 225, Training Loss: 528.968060, Validation Loss: 1332.806107
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch225.pth
+
+Epoch 226/250
+Epoch 226/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 358.24it/s]
+Epoch 226, Training Loss: 528.961723, Validation Loss: 1332.762506
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch226.pth
+
+Epoch 227/250
+Epoch 227/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 322.91it/s]
+Epoch 227, Training Loss: 528.948688, Validation Loss: 1332.797726
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch227.pth
+
+Epoch 228/250
+Epoch 228/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 310.59it/s]
+Epoch 228, Training Loss: 528.955765, Validation Loss: 1332.863455
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch228.pth
+
+Epoch 229/250
+Epoch 229/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 316.87it/s]
+Epoch 229, Training Loss: 528.955879, Validation Loss: 1332.828872
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch229.pth
+
+Epoch 230/250
+Epoch 230/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:04<00:00, 293.03it/s]
+Epoch 230, Training Loss: 528.949172, Validation Loss: 1332.832279
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch230.pth
+
+Epoch 231/250
+Epoch 231/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 330.47it/s]
+Epoch 231, Training Loss: 528.967380, Validation Loss: 1332.797158
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch231.pth
+
+Epoch 232/250
+Epoch 232/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 337.69it/s]
+Epoch 232, Training Loss: 528.950999, Validation Loss: 1332.797711
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch232.pth
+
+Epoch 233/250
+Epoch 233/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 329.34it/s]
+Epoch 233, Training Loss: 528.964664, Validation Loss: 1332.767095
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch233.pth
+
+Epoch 234/250
+Epoch 234/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 341.86it/s]
+Epoch 234, Training Loss: 528.947693, Validation Loss: 1332.851656
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch234.pth
+
+Epoch 235/250
+Epoch 235/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 335.31it/s]
+Epoch 235, Training Loss: 528.960234, Validation Loss: 1332.775383
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch235.pth
+
+Epoch 236/250
+Epoch 236/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 316.01it/s]
+Epoch 236, Training Loss: 528.979044, Validation Loss: 1332.691130
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch236.pth
+
+Epoch 237/250
+Epoch 237/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 329.40it/s]
+Epoch 237, Training Loss: 528.960107, Validation Loss: 1332.723962
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch237.pth
+
+Epoch 238/250
+Epoch 238/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 350.67it/s]
+Epoch 238, Training Loss: 528.952214, Validation Loss: 1332.754546
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch238.pth
+
+Epoch 239/250
+Epoch 239/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 361.84it/s]
+Epoch 239, Training Loss: 528.948134, Validation Loss: 1332.662976
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch239.pth
+
+Epoch 240/250
+Epoch 240/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 348.81it/s]
+Epoch 240, Training Loss: 528.957530, Validation Loss: 1332.629475
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch240.pth
+
+Epoch 241/250
+Epoch 241/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 329.47it/s]
+Epoch 241, Training Loss: 528.940159, Validation Loss: 1332.547764
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch241.pth
+
+Epoch 242/250
+Epoch 242/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 342.51it/s]
+Epoch 242, Training Loss: 528.934260, Validation Loss: 1332.632215
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch242.pth
+
+Epoch 243/250
+Epoch 243/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 334.12it/s]
+Epoch 243, Training Loss: 528.917467, Validation Loss: 1332.632343
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch243.pth
+
+Epoch 244/250
+Epoch 244/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 322.05it/s]
+Epoch 244, Training Loss: 528.930159, Validation Loss: 1332.546427
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch244.pth
+
+Epoch 245/250
+Epoch 245/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 334.25it/s]
+Epoch 245, Training Loss: 528.929388, Validation Loss: 1332.635281
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch245.pth
+
+Epoch 246/250
+Epoch 246/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 328.45it/s]
+Epoch 246, Training Loss: 528.933804, Validation Loss: 1332.694695
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch246.pth
+
+Epoch 247/250
+Epoch 247/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 359.65it/s]
+Epoch 247, Training Loss: 528.935977, Validation Loss: 1332.666374
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch247.pth
+
+Epoch 248/250
+Epoch 248/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 347.73it/s]
+Epoch 248, Training Loss: 528.947927, Validation Loss: 1332.618578
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch248.pth
+
+Epoch 249/250
+Epoch 249/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 356.79it/s]
+Epoch 249, Training Loss: 528.947193, Validation Loss: 1332.658482
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch249.pth
+
+Epoch 250/250
+Epoch 250/250: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1209/1209 [00:03<00:00, 329.24it/s]
+Epoch 250, Training Loss: 528.936886, Validation Loss: 1332.721886
+Checkpoint saved: results/molecule_distance_calc/molecule_distance_run_epoch250.pth
+Final model saved at: results/molecule_distance_calc/molecule_distance_run_final.pth
+EMA model saved: results/molecule_distance_calc/molecule_distance_run_ema_final.pth
+
+--- Test Phase ---
+Test Loss: 1943.706110
+Test MSE: 1943.705933
+Test MAE: 18.886015
+Test R²: 0.999887
+Energy MAE: 18.886014938354492
+Energy RMSE: 44.08748045213275
+Energy R²: 0.9998870782180617
+Test results saved: results/molecule_distance_calc/molecule_distance_run_test_results_positions.txt
